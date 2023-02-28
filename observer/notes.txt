@@ -1,0 +1,65 @@
+# Define
+- defines a 1 to many dependency between objects
+- so that when one object changes state, all of its dependents are notified and updated automatically
+
+- define a 1 to many dependency
+- when observable changes state then all observers should be notified and updated automatically
+
+*the observable*
+1 - internal main state
+2 - list of observers
+3 - mechanism for adding an oberver to the list
+4 - a mechansim for removing
+5 - mechanism for notifying all observers
+6 - mechanism for triggering notification of observers of the observable internal state
+7 - mechanism for causing the change in state of the obervable
+
+* the observers*
+- mechanism for receiving updates from the obervable
+
+# Problem solved by the pattern
+- high coupling
+- low cohesion
+- direct dependency- non uniform updates
+- delayed updates
+- manual and tiresome updates
+
+# Software Design Principles applied in the pattern
+- all of them that you know
+
+# Structure (class diagram)
+- paste link here []
+- get image from screenshot or refactoring guru
+
+# Steps to follow while applying the pattern
+Step 1: Create an abstract Type (interface or abstract class) for any possible observer, with a 	method declaration for receiving updates or notification.
+Step 2: You can optionally create an abstract type (interface or abstract class) for all the 	mechanisms an Observable must contain.
+Step 3: Create the class to act as the observable.
+Step 4: With in the observable class, define the Main State of the observable.
+Step 5: With in the observable class, define the List or collection of Observers.
+Step 6: With in the observable class, define the mechanism for adding an Observer to the list of 	Observers.
+Step 7: With in the observable class, define the mechanism for removing an Observer from the list of Observers.
+Step 8: With in the observable class, define the mechanism for notifying all observers, of the Observable internal state change.
+Step 9: With in the observable class, define the mechanism for triggering the notification of all observers, of the Observable internal state change.
+Step 10: With in the observable class, define the mechanism for causing the change in state of the Observable and invoking the notification trigger.
+Step 11: Create concrete implementations of the observer super type while specifying what happens (on receiving update or with updates)
+Step 12: Create an observable object (Instantiate Observable).
+Step 13: Create observer objects (Instantiate Observer) .
+Step 14: subscribe observers to observable.
+Step 14: Test to see whether the Observer pattern has been implemented successfully. Try to invoke the method that causes change in the observable and see whether all the subscribers (observers) receive notification about the changes.
+
+# Pseudo code of pattern
+- go to refactoring guru 
+
+# Practical implementation
+- see ts files in this directory
+
+# Real life applications
+- mailing systems
+- push notification
+- news publising
+- weather updates
+- soial media platform notification feature
+- socket programming
+
+# Benefits
